@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css';
-
+import Author from '../components/Author';
 export default function Banner() {
   SwiperCore.use([Autoplay]);
 
@@ -16,7 +16,9 @@ export default function Banner() {
   return (
     <section className='py-16 bg-zinc-400'>
       <div className='container mx-auto md:px-20'>
-        <h1 className='font-bold text-4xl pb-12 text-center'>Cycling Trends</h1>
+        <h1 className='font-bold text-4xl pb-12 text-center text-white'>
+          Cycling Trends
+        </h1>
         <Swiper slidesPerView={1}>
           <SwiperSlide>{Slide()}</SwiperSlide>
           {/* <SwiperSlide>{Slide()}</SwiperSlide>
@@ -67,16 +69,14 @@ function Slide() {
           </p>
           <p className='text-gray-100 text-lg'>
             It's incredible to see so many people embracing cycling given the
-            sheer numbe.r of bikes present
+            sheer number of bikes present
           </p>
           <p className='text-gray-100 text-lg'>
             It's always fun to cruise around on a bike, regardless of the
-            weather. I will admit that in the nicer areas, they are a little
-            stringent about lighting on your bike, I was pulled over by the
-            police for not having any lights on.
+            weather.
           </p>
         </div>
-        <h1 className='text-gray-100'>author</h1>
+        <Author />
       </div>
     </div>
   );

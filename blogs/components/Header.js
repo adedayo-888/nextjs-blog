@@ -9,7 +9,7 @@ import {
 
 const Header = () => {
   return (
-    <header className='bg-gray-50'>
+    <header className='bg-gray-50 text-green-800'>
       <div
         className='flex flex-col items-center 
       sm:flex-row
